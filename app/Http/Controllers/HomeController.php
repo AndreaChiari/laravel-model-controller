@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 //use Illuminate\Http\Request;
-use App\Models\Comic;
+use App\Models\Movie;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $comics = Comic::all();
+        $movies = movie::all();
 
-        dd($comics);
-        return view('home', compact('comics'));
+        return view('home', compact('movies'));
     }
 }

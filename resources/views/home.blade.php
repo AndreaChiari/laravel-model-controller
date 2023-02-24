@@ -8,12 +8,17 @@
     @vite('resources/js/app.js')
 </head>
 <body>
-    <div class="row">
-        <div class="col-4">
-            <div class="card">
-                
-
+    <div class="container">
+        <div class="row">
+            @foreach($movies as $movie)
+            <div class="card col-6" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                <h4 class="card-text">{{$movie->title}}</h4>
+                <h6>{{$movie->date}}</h6>
+                </div>
             </div>
+            @endforeach
         </div>
     </div>
 </body>
